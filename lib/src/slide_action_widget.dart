@@ -282,7 +282,7 @@ class _SlideActionState extends State<SlideAction>
       _thumbAnimationController.removeListener(_animationToAlignmentFraction);
 
   void _stopAnimation() {
-    if (_thumbAnimationController.isAnimating) {
+    if (_thumbAnimationController.isAnimating && mounted) {
       _thumbAnimationController.stop();
     }
   }
